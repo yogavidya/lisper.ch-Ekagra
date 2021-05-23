@@ -1,0 +1,62 @@
+version: "3.9"
+services:
+
+    lisperch-storage:
+        build: ./services/storage
+        image: yogavidya/lisperch-storage
+        container_name: 
+            lisperch-storage
+        logging:
+            driver: local
+        networks:
+            - backend
+        ports:
+            - "5432:5432"
+        volumes:
+            - lisperch-data-volume:/var/lib/postgresql/data
+
+    lisperch-backend:
+        build: ./services/backend
+        image: yogavidya/lisperch-backend
+        container_name: 
+            lisperch-backend
+        hostname: lisperch-backend-development
+        logging:
+            driver: local
+        networks:
+            - backend
+            - application
+        ports:
+            - "9999:9999"
+        links:
+            - "lisperch-storage"
+        depends_on: 
+            - lisperch-storage
+        stdin_open: true # docker run -i
+        tty: true        # docker run -t
+        # has to be interactive - for now
+
+
+    lisperch-frontend:
+        build: ./services/frontend
+        image: yogavidya/lisperch-frontend
+        container_name: 
+            lisperch-frontend
+        logging:
+            driver: local
+        networks:
+            - application
+        ports:
+            - "8090:8090"
+        links:
+            - lisperch-backend
+        depends_on: 
+            - lisperch-backend
+
+networks:
+    backend:
+    application:
+
+volumes:
+    lisperch-data-volume:
+

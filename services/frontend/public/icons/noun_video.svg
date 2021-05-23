@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" x="0px" y="0px" viewBox="0 0 100 125" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0,-952.36218)">
+    <path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#000000;enable-background:accumulate;" d="m 22.999999,970.36218 c -9.366016,0 -17.0000005,7.634 -17.0000005,17 l 0,30.00002 c 0,9.366 7.6339845,17 17.0000005,17 l 54,0 c 9.36602,0 17.000002,-7.634 17.000002,-17 l 0,-30.00002 c 0,-9.366 -7.633983,-17 -17.000002,-17 l -54,0 z m 0,6 54,0 c 6.145799,0 11.000002,4.8542 11.000002,11 l 0,30.00002 c 0,6.1458 -4.854203,11 -11.000002,11 l -54,0 c -6.1458,0 -11,-4.8542 -11,-11 l 0,-30.00002 c 0,-6.1458 4.8542,-11 11,-11 z m 20,13 0,26.00002 22,-13 -22,-13.00002 z" fill="#000000" fill-opacity="1" stroke="none" marker="none" visibility="visible" display="inline" overflow="visible"/>
+  </g>
+</svg>
